@@ -4,10 +4,12 @@ export const theme: MantineThemeOverride = {
   /** Put your mantine theme override here */
   primaryColor: "primary",
   colors: {
-    primary: colorsTuple(Array.from({ length: 10 }, () => "#481aed")),
+    primary: colorsTuple(Array.from({ length: 10 }, () => "#1e90ff")),
   },
   defaultRadius: "md",
   headings: {
-    fontFamily: "Inter, sans-serif",
+    fontFamily: "Lexend Deca, sans-serif",
   },
+  fontFamily: "Verdana, sans-serif",
+  fontFamilyMonospace: "Monaco, Courier, monospace",
 };
