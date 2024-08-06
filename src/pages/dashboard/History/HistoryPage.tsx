@@ -1,45 +1,78 @@
-import { Flex, Group, Stack, Title } from "@mantine/core";
+import { Badge, Flex, Group, Stack, Title } from "@mantine/core";
 import { DataTable } from "../../../components/data-table/DataTable";
 import { MRT_ColumnDef } from "mantine-react-table";
-import { DateCell, TimeCell } from "../../../components/data-table/CustomeCell";
-import { TaskWithTaskType, Task } from "../../../schema/task.schema";
+import { DateCell } from "../../../components/data-table/CustomeCell";
+import { useTasks } from "../Home/hooks";
+import { format } from "date-fns";
+import { getStatusColor } from "../../../components/common/StatusSection";
 
-const columns: MRT_ColumnDef<TaskWithTaskType>[] = [
+const columns: MRT_ColumnDef<Task>[] = [
   {
-    accessorKey: "date",
+    accessorKey: "createdAt",
     header: "Date",
-    id: "date",
-    size: 100,
+    id: "createdAt",
+
     Cell: ({ cell }) => DateCell(cell.getValue<string>()),
   },
   {
-    accessorKey: "startTime",
+    accessorKey: "fromTime",
     header: "Start Time",
-    id: "startTime",
-    Cell: ({ cell }) => TimeCell(cell.getValue<string>()),
+    id: "fromTime",
+    Cell: ({ row }) => {
+      const value = row.original.fromTime;
+      return (
+        <span className="line-clamp-1">
+          {value ? format(value, "hh:mm (a)") : "-"}
+        </span>
+      );
+    },
   },
 
   {
-    accessorKey: "endTime",
+    accessorKey: "toTime",
     header: "End Time",
-    id: "endTime",
-    Cell: ({ cell }) => TimeCell(cell.getValue<string>()),
+    id: "toTime",
+    Cell: ({ row }) => {
+      const value = row.original.toTime;
+      return (
+        <span className="line-clamp-1">
+          {value ? format(value, "hh:mm (a)") : "-"}
+        </span>
+      );
+    },
   },
+
   {
-    accessorKey: "date",
-    header: "Date",
-    id: "date",
-    size: 100,
-    Cell: ({ cell }) => DateCell(cell.getValue<string>()),
-  },
-  {
-    accessorKey: "taskType.name",
+    accessorKey: "taskName",
     header: "Task",
-    id: "taskType.name",
+    id: "taskName",
+  },
+  {
+    accessorKey: "subTaskName",
+    header: "SubTask",
+    id: "subTaskName",
+  },
+  {
+    accessorKey: "status",
+    header: "Status",
+    id: "status",
+    Cell: ({ row }) => {
+      return (
+        <Badge color={getStatusColor(row.original.status)}>
+          {row.original.status}
+        </Badge>
+      );
+    },
+  },
+  {
+    accessorKey: "complexity",
+    header: "Complexity",
+    id: "complexity",
   },
 ];
 
 export function HistoryPage() {
+  const { data, isLoading } = useTasks();
   return (
     <Stack p="md">
       <Flex
@@ -52,8 +85,9 @@ export function HistoryPage() {
       </Flex>
       <DataTable
         columns={columns}
-        data={[]}
-        total={0}
+        isLoading={isLoading}
+        data={data ?? []}
+        total={2}
         renderRowActions={(row) => {
           if (row.original && row.original.id) {
             return <Group wrap="nowrap"></Group>;

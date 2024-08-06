@@ -38,7 +38,7 @@ export function DataTable<T extends MRT_RowData>({
 
   useEffect(() => {
     setParams({ _page: pagination.pageIndex, _per_page: pagination.pageSize });
-  }, [pagination]);
+  }, [pagination, setParams]);
 
   const table = useMantineReactTable({
     columns,
@@ -69,6 +69,7 @@ export function DataTable<T extends MRT_RowData>({
     // table state
     state: { pagination, isLoading },
     // row actions
+    positionActionsColumn: "last",
     enableRowActions: !!renderRowActions,
     renderRowActions: ({ row }) => renderRowActions?.(row),
   });
