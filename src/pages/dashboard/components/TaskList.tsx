@@ -1,7 +1,7 @@
 // src/components/TaskList.tsx
 import { Badge, Box, Card, Grid, Group, Text, Title } from "@mantine/core";
-import { useTasks } from "../hooks";
-import { getStatusColor } from "../../../../components/common/StatusSection";
+import { useTasks } from "@pages/dashboard/Home/hooks";
+import { getStatusColor } from "@components/common/StatusSection";
 import { CreateTaskModal } from "./FormModal";
 
 export function TaskList() {
@@ -13,7 +13,9 @@ export function TaskList() {
         <Title order={2} mb="md">
           Tasks for Today
         </Title>
-        <CreateTaskModal />
+        <Box mb="sm">
+          <CreateTaskModal />
+        </Box>
       </Group>
       {data?.length === 0 && <p> Empty Tasks</p>}
       <Grid>

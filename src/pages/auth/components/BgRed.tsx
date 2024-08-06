@@ -1,5 +1,5 @@
 import { Box, Image } from "@mantine/core";
-import BgRedImg from "../../../../public/icon/auth-bg-red.svg";
+import BgRedImg from "../../../assets/icon/auth-bg-red.svg";
 
 export default function BgRed() {
   return (

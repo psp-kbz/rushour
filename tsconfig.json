@@ -1,9 +1,38 @@
 {
-  "files": [],
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "@assets/*": ["./src/assets/*"],
+      "@components/*": ["./src/components/*"],
+      "@config/*": ["./src/config/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@layouts/*": ["./src/layouts"],
+      "@pages/*": ["./src/pages/*"],
+      "@services/*": ["./src/services/*"],
+      "@store/*": ["./src/store/*"],
+      "@theme/*": ["./src/theme/*"],
+      "@graphql/*": ["./src/graphql/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@context/*": ["./src/context/*"]
+    }
+  },
+  "include": ["src", "vite.config.ts", "vitest.config.ts"],
+  "exclude": ["!**/*.(spec|test).ts?(x)"],
   "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
     {
       "path": "./tsconfig.node.json"
     }

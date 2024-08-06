@@ -21,6 +21,7 @@ export async function getTasks(): Promise<Array<Task>> {
         "in-progress",
         "pending",
         "completed",
+        "blocked",
       ]),
       complexity: faker.helpers.arrayElement(["Low", "Medium", "High"]),
       createdAt: faker.date.past(),

@@ -50,13 +50,6 @@ export function Sidebar() {
           ))}
         </AppShellSection>
       </ScrollArea>
-      {isMobile && (
-        <Stack p="sm">
-          <Divider />
-          <NavLink leftSection={<IconUserCircle />} label="Super Admin" />
-          <NavLink leftSection={<IconLogout />} label="Logout" />
-        </Stack>
-      )}
     </NavbarWrapper>
   );
 }

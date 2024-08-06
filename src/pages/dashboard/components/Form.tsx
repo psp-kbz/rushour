@@ -1,5 +1,5 @@
 import { useForm, zodResolver } from "@mantine/form";
-import { taskSchema } from "../../../../utils/schema";
+import { taskSchema } from "@utils/schema";
 import { Box, Button, Group, Stack, TextInput } from "@mantine/core";
 type FormProps = {
   isLoading?: boolean;

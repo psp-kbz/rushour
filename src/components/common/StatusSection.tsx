@@ -7,8 +7,10 @@ export const getStatusColor = (status: string) => {
     case "pending":
       return "yellow";
     case "planned":
+      return "violet";
+    case "blocked":
       return "red";
     default:
-      return "gray";
+      return "teal";
   }
 };

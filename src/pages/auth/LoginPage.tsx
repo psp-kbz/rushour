@@ -11,8 +11,21 @@ import {
 import logo from "../../assets/images/logo/logo-no-slogan.webp";
 import BgBlue from "./components/BgBlue";
 import BgRed from "./components/BgRed";
+import { useAuthRoute } from "@hooks/useAuth";
+import { useLogin } from "./queries";
+import { useForm, zodResolver } from "@mantine/form";
+import { loginSchema } from "@utils/schema";
 
 export function LoginPage() {
+  useAuthRoute();
+  const { mutate, isPending } = useLogin();
+  const form = useForm({
+    initialValues: {
+      loginId: "",
+      password: "",
+    },
+    validate: zodResolver(loginSchema),
+  });
   return (
     <Center
       w="100%"
@@ -30,11 +43,23 @@ export function LoginPage() {
         radius="md"
         shadow="md"
         component="form"
+        onSubmit={form.onSubmit((values) => mutate(values))}
       >
         <Box component="img" alt="logo" src={logo} height={50} />
-        <TextInput mt={20} withAsterisk label="Employee ID" />
-        <PasswordInput withAsterisk mt="md" label="Password" />
-        <Button fullWidth loading={false} mt="xl" type="submit">
+        <TextInput
+          mt={20}
+          withAsterisk
+          label="Employee ID"
+          {...form.getInputProps("loginId")}
+        />
+        <PasswordInput
+          withAsterisk
+          mt="md"
+          label="Password"
+          {...form.getInputProps("password")}
+        />
+
+        <Button fullWidth loading={isPending} mt="xl" type="submit">
           Login
         </Button>
       </Paper>

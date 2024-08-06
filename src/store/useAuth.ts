@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
-import { encryptStorage } from "@utils/encryptStore";
+import { encryptStorage } from "@utils/encrypt-store";
 
 interface AuthState {
   logout: () => void;

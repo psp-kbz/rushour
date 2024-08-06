@@ -14,6 +14,7 @@ import {
   IconUserCircle,
 } from "@tabler/icons-react";
 import { useDrawer } from "../../../hooks/useDrawer";
+import { Logo } from "../Logo";
 
 export function RightSection() {
   return (
@@ -59,7 +60,7 @@ export function Header() {
       <Group h="100%" justify="space-between">
         <Group h="100%">
           <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-          <IconHelicopter size={30} />
+          <Logo height={35} />
         </Group>
         <RightSection />
       </Group>
