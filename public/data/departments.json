@@ -1,0 +1,414 @@
+[
+  {
+    "id": 1,
+    "departmentName": "F01-HUMAN RESOURCE FUNCTION"
+  },
+  {
+    "id": 2,
+    "departmentName": "F03-SHARED SERVICE FUNCTION"
+  },
+  {
+    "id": 3,
+    "departmentName": "F04-LEGAL AND COMPLIANCE FUNCTION"
+  },
+  {
+    "id": 4,
+    "departmentName": "F05-INTERNAL AUDIT FUNCTION"
+  },
+  {
+    "id": 5,
+    "departmentName": "F06-TECHNOLOGY FUNCTION"
+  },
+  {
+    "id": 6,
+    "departmentName": "F07-MARKETING FUNCTION"
+  },
+  {
+    "id": 7,
+    "departmentName": "F08-CORPORATE AFFAIR FUNCTION"
+  },
+  {
+    "id": 8,
+    "departmentName": "F09-FINANCE FUNCTION"
+  },
+  {
+    "id": 9,
+    "departmentName": "F10-RISK MANAGEMENT FUNCTION"
+  },
+  {
+    "id": 10,
+    "departmentName": "F11-CREDIT FUNCTION"
+  },
+  {
+    "id": 11,
+    "departmentName": "F12-CEO OFFICE"
+  },
+  {
+    "id": 12,
+    "departmentName": "F13-CHAIRMAN OFFICE"
+  },
+  {
+    "id": 13,
+    "departmentName": "F14-Sale Function"
+  },
+  {
+    "id": 14,
+    "departmentName": "F15-OPERATION FUNCTION"
+  },
+  {
+    "id": 15,
+    "departmentName": "F16-DIGITAL PROFESSIONAL SERVICES"
+  },
+  {
+    "id": 16,
+    "departmentName": "F17-ANALYTICS CENTRE OF EXCELLENCE FUNCTION"
+  },
+  {
+    "id": 17,
+    "departmentName": "F18-KBZPay PMO FUNCTION"
+  },
+  {
+    "id": 18,
+    "departmentName": "F19-PUBLIC POLICY AND GOVERNMENT AFFAIRS"
+  },
+  {
+    "id": 19,
+    "departmentName": "F20-KBZPay CENTER OPERATION FUNCTION"
+  },
+  {
+    "id": 20,
+    "departmentName": "F21-SOFTWARE AND DATA ANALYTICS FUNCTION"
+  },
+  {
+    "id": 21,
+    "departmentName": "F22-MARKETING COMMUNICATIONS FUNCTION"
+  },
+  {
+    "id": 22,
+    "departmentName": "F23-MD OFFICE 1"
+  },
+  {
+    "id": 23,
+    "departmentName": "F24-MD OFFICE 2"
+  },
+  {
+    "id": 24,
+    "departmentName": "F25-KBZPAY OPERATIONS FUNCTION"
+  },
+  {
+    "id": 25,
+    "departmentName": "F26-VIRTUAL BRANCH FUNCTION"
+  },
+  {
+    "id": 26,
+    "departmentName": "F27-CASH MANAGEMENT FUNCTION"
+  },
+  {
+    "id": 27,
+    "departmentName": "F28-CAR (ALL COLLECTIONS AND RECOVERY) FUNCTION"
+  },
+  {
+    "id": 28,
+    "departmentName": "F29-BRANCH OPERATIONS, YGN AND LOWER MYANMAR"
+  },
+  {
+    "id": 29,
+    "departmentName": "F30-BRANCH OPERATIONS, MDY AND UPPER MYANMAR"
+  },
+  {
+    "id": 30,
+    "departmentName": "F31-BRANCH OPERATIONS, SHAN AND KAYAH"
+  },
+  {
+    "id": 31,
+    "departmentName": "F32-BRANCH OPERATIONS, NAY PYI TAW"
+  },
+  {
+    "id": 32,
+    "departmentName": "F33-CREDIT FUNCTION"
+  },
+  {
+    "id": 33,
+    "departmentName": "F34-ADMINISTRATION AND DIGITAL PROFESSIONAL SERVICES"
+  },
+  {
+    "id": 34,
+    "departmentName": "F35-GOVERNMENT AFFAIRS"
+  },
+  {
+    "id": 35,
+    "departmentName": "F36-KBZPAY BUSINESS INSIGHTS/ DATA"
+  },
+  {
+    "id": 36,
+    "departmentName": "F37-KBZPAY TREASURY AND PERFORMANCE MANAGEMENT"
+  },
+  {
+    "id": 37,
+    "departmentName": "V01-SMART CORPORATE / FI VC"
+  },
+  {
+    "id": 38,
+    "departmentName": "V02-SMART DEPOSIT / WEALTH VC"
+  },
+  {
+    "id": 39,
+    "departmentName": "V03-SMART SME VC"
+  },
+  {
+    "id": 40,
+    "departmentName": "V04-UNSECURED CONSUMER"
+  },
+  {
+    "id": 41,
+    "departmentName": "V05-SMART TERRITORIES - KAMARYUT VC"
+  },
+  {
+    "id": 42,
+    "departmentName": "V06-SMART COMMERCIAL REAL ESTATE VC"
+  },
+  {
+    "id": 43,
+    "departmentName": "V07-SMART VIRTUAL BRANCH VC"
+  },
+  {
+    "id": 44,
+    "departmentName": "V08-TRADE FINANCE"
+  },
+  {
+    "id": 45,
+    "departmentName": "V09-PAYROLL"
+  },
+  {
+    "id": 46,
+    "departmentName": "V10-SMART TRANSACTION BANKING VC"
+  },
+  {
+    "id": 47,
+    "departmentName": "V11-SMART TERRITORIES - BIG 28 VC"
+  },
+  {
+    "id": 48,
+    "departmentName": "V12-SMART SECURED CONSUMER VC"
+  },
+  {
+    "id": 49,
+    "departmentName": "V13-TREASURY"
+  },
+  {
+    "id": 50,
+    "departmentName": "V14-SMART CASH AND NETWORK LOGISTICS VC"
+  },
+  {
+    "id": 51,
+    "departmentName": "V15-CAR (ALL COLLECTIONS AND RECOVERY) VC"
+  },
+  {
+    "id": 52,
+    "departmentName": "V16-SMART TERRITORIES - EMERGING 600 VC"
+  },
+  {
+    "id": 53,
+    "departmentName": "V17-SMART DOMESTIC REMITTANCE VC"
+  },
+  {
+    "id": 54,
+    "departmentName": "V19-AGENT BANKING"
+  },
+  {
+    "id": 55,
+    "departmentName": "V20-SMART TERRITORIES (BLUE) VC"
+  },
+  {
+    "id": 56,
+    "departmentName": "V21-SMART TERRITORIES (RED) VC"
+  },
+  {
+    "id": 57,
+    "departmentName": "V22-SMART TERRITORIES (GREEN) VC"
+  },
+  {
+    "id": 58,
+    "departmentName": "V23-SMART INTERNATIONAL CORPORATE/ FI VC"
+  },
+  {
+    "id": 59,
+    "departmentName": "V24-LOCAL CORPORATE"
+  },
+  {
+    "id": 60,
+    "departmentName": "V25-WHOLESALE BANKING"
+  },
+  {
+    "id": 61,
+    "departmentName": "V26-STRUCTURED FINANCE"
+  },
+  {
+    "id": 62,
+    "departmentName": "V27-PROPERTY VC"
+  },
+  {
+    "id": 63,
+    "departmentName": "V28-BANCASSURANCE VC"
+  },
+  {
+    "id": 64,
+    "departmentName": "V29-SMART TERRITORIES 1 VC"
+  },
+  {
+    "id": 65,
+    "departmentName": "V30-SMART TERRITORIES 2 VC"
+  },
+  {
+    "id": 66,
+    "departmentName": "V31-SMART TERRITORIES 3 VC"
+  },
+  {
+    "id": 67,
+    "departmentName": "V32-SMART TERRITORIES 4 VC"
+  },
+  {
+    "id": 68,
+    "departmentName": "V33-SMART TERRITORIES 5 VC"
+  },
+  {
+    "id": 69,
+    "departmentName": "V34-DIGITAL HEALTH"
+  },
+  {
+    "id": 70,
+    "departmentName": "V35-KBZPAY MARKET"
+  },
+  {
+    "id": 71,
+    "departmentName": "V36-KBZPAY OFFICIAL ACCOUNTS AND CHAT"
+  },
+  {
+    "id": 72,
+    "departmentName": "V37-KBZPay Center"
+  },
+  {
+    "id": 73,
+    "departmentName": "V38-SMART CORPORATE TRANSACTION BANKING VC"
+  },
+  {
+    "id": 74,
+    "departmentName": "V39-Smart Retail Transaction Banking VC"
+  },
+  {
+    "id": 75,
+    "departmentName": "V40-OREO (OTHER REAL ESTATE OWNED)"
+  },
+  {
+    "id": 76,
+    "departmentName": "V41-SMART BUSINESS BANKING VC"
+  },
+  {
+    "id": 77,
+    "departmentName": "V42-SME AND BUSINESS BANKING"
+  },
+  {
+    "id": 78,
+    "departmentName": "V43-DEPOSIT/ WEALTH AND BANCASSURANCE VC"
+  },
+  {
+    "id": 79,
+    "departmentName": "V44-TRANSACTION BANKING"
+  },
+  {
+    "id": 80,
+    "departmentName": "V45-KBZPAY MINI APPS"
+  },
+  {
+    "id": 81,
+    "departmentName": "V46-DIGITAL PROFESSIONAL SERVICES"
+  },
+  {
+    "id": 82,
+    "departmentName": "V47-COMMERCIAL BANKING"
+  },
+  {
+    "id": 83,
+    "departmentName": "V48-INTERNATIONAL CORPORATE"
+  },
+  {
+    "id": 84,
+    "departmentName": "V49-INSTITUTIONAL BANKING"
+  },
+  {
+    "id": 85,
+    "departmentName": "V50-KBZPAY, DIGITAL BANKING AND CARD BUSINESS"
+  },
+  {
+    "id": 86,
+    "departmentName": "V51-MD OFFICE 3"
+  },
+  {
+    "id": 87,
+    "departmentName": "V52-MD OFFICE 4"
+  },
+  {
+    "id": 88,
+    "departmentName": "V53-MD OFFICE 5"
+  },
+  {
+    "id": 89,
+    "departmentName": "V54-CARD BUSINESS"
+  },
+  {
+    "id": 90,
+    "departmentName": "V55-MANAGED SERVICE BUSINESS"
+  },
+  {
+    "id": 91,
+    "departmentName": "V56-WEALTH AND BANCASSURANCE"
+  },
+  {
+    "id": 92,
+    "departmentName": "V57-CUSTOMER SERVICE"
+  },
+  {
+    "id": 93,
+    "departmentName": "V58-RETAIL BANKING"
+  },
+  {
+    "id": 94,
+    "departmentName": "V59-FINTECH"
+  },
+  {
+    "id": 95,
+    "departmentName": "V60-DEPOSIT"
+  },
+  {
+    "id": 96,
+    "departmentName": "V61-MORTGAGE"
+  },
+  {
+    "id": 97,
+    "departmentName": "V62-KBZPAY LENDING"
+  },
+  {
+    "id": 98,
+    "departmentName": "V63-SALES AND ENGAGEMENT"
+  },
+  {
+    "id": 99,
+    "departmentName": "V64-KBZPAY"
+  },
+  {
+    "id": 100,
+    "departmentName": "V65-KBZPAY EMERGING 6 MILLIONS"
+  },
+  {
+    "id": 101,
+    "departmentName": "V66-BANCASSURANCE"
+  },
+  {
+    "id": 102,
+    "departmentName": "V67-WEALTH"
+  },
+  {
+    "id": 103,
+    "departmentName": "N/A"
+  }
+]

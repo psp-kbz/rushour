@@ -7,16 +7,20 @@ import {
   rem,
 } from "@mantine/core";
 import {
-  IconHelicopter,
+  IconBuilding,
   IconLogout,
-  IconMail,
   IconUser,
   IconUserCircle,
 } from "@tabler/icons-react";
 import { useDrawer } from "../../../hooks/useDrawer";
 import { Logo } from "../Logo";
+import useLogout from "@hooks/useLogout";
+import { useUserStore } from "@store/useUser";
 
 export function RightSection() {
+  const logOut = useLogout();
+  const userInfo = useUserStore((state) => state.user);
+
   return (
     <Menu shadow="md" width={200}>
       <Menu.Target>
@@ -30,19 +34,21 @@ export function RightSection() {
         <Menu.Item
           leftSection={<IconUser style={{ width: rem(14), height: rem(14) }} />}
         >
-          User Name
+          {userInfo?.userName}
         </Menu.Item>
         <Menu.Item
-          leftSection={<IconMail style={{ width: rem(14), height: rem(14) }} />}
+          leftSection={
+            <IconBuilding style={{ width: rem(14), height: rem(14) }} />
+          }
         >
-          Email
+          {userInfo?.branchCode}
         </Menu.Item>
         <Menu.Item
           color="red"
           leftSection={
             <IconLogout style={{ width: rem(14), height: rem(14) }} />
           }
-          onClick={() => null}
+          onClick={logOut}
         >
           Logout
         </Menu.Item>

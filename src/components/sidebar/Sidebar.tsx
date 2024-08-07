@@ -1,13 +1,10 @@
 import {
-  Divider,
   Drawer,
-  NavLink,
   ScrollArea,
-  Stack,
   AppShellNavbar,
   AppShellSection,
 } from "@mantine/core";
-import { IconLogout, IconUserCircle } from "@tabler/icons-react";
+
 import { NavItem } from "./NavItem";
 import { useScreen } from "../../hooks/useScreen";
 import { useDrawer } from "../../hooks/useDrawer";
@@ -39,8 +36,6 @@ export function NavbarWrapper({ children }: NavbarWrapperProps) {
 }
 
 export function Sidebar() {
-  const { isMobile } = useScreen();
-
   return (
     <NavbarWrapper>
       <ScrollArea type="scroll">

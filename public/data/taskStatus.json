@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "status": "completed"
+  },
+  {
+    "id": 2,
+    "status": "in-progress"
+  },
+  {
+    "id": 3,
+    "status": "planned"
+  },
+  {
+    "id": 4,
+    "status": "pending"
+  },
+  {
+    "id": 5,
+    "status": "blocked"
+  }
+]

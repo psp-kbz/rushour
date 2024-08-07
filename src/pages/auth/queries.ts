@@ -23,6 +23,7 @@ export function useLogin() {
         service_id: import.meta.env.VITE_SERVICE_ID,
       }),
     onSuccess: (data) => {
+      console.log("Success");
       const result = data.data?.Data;
       const permissions = getPermission(result?.role_info);
       // if (result?.branch_id) {

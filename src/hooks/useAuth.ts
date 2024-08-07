@@ -9,7 +9,7 @@ export function useAuthedRoute() {
 
   useEffect(() => {
     if (!accessToken) {
-      navigate("/");
+      navigate("/login");
     }
   }, [accessToken, navigate]);
 }

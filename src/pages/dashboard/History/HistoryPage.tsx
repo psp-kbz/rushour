@@ -2,7 +2,7 @@ import { Badge, Flex, Group, Stack, Title } from "@mantine/core";
 import { DataTable } from "../../../components/data-table/DataTable";
 import { MRT_ColumnDef } from "mantine-react-table";
 import { DateCell } from "../../../components/data-table/CustomCell";
-import { useTasks } from "../Home/hooks";
+import { useTasks } from "../Task/hooks";
 import { format } from "date-fns";
 import { getStatusColor } from "../../../components/common/StatusSection";
 

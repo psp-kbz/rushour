@@ -1,4 +1,4 @@
-import { TaskList } from "@pages/dashboard/components/TaskList";
+import { TaskList } from "@pages/dashboard/Task/TaskList";
 
 export function HomePage() {
   return (

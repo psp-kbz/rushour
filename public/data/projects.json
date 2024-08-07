@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "projectName": "API Ring"
+  },
+  {
+    "id": 2,
+    "projectName": "SSBP"
+  },
+  {
+    "id": 3,
+    "projectName": "Digital Onbo"
+  },
+  {
+    "id": 4,
+    "projectName": "CMS / TMS"
+  },
+  {
+    "id": 5,
+    "projectName": "Documentation"
+  },
+  {
+    "id": 6,
+    "projectName": "BA"
+  },
+  {
+    "id": 7,
+    "projectName": "QMS"
+  },
+  {
+    "id": 8,
+    "projectName": "CDMS"
+  },
+  {
+    "id": 9,
+    "projectName": "SmartPay"
+  },
+  {
+    "id": 10,
+    "projectName": "H2H"
+  },
+  {
+    "id": 11,
+    "projectName": "SMS"
+  },
+  {
+    "id": 12,
+    "projectName": "DocumentAI"
+  },
+  {
+    "id": 13,
+    "projectName": "KBZPay"
+  },
+  {
+    "id": 14,
+    "projectName": "Inbound Remittance"
+  },
+  {
+    "id": 15,
+    "projectName": "N / A"
+  },
+  {
+    "id": 16,
+    "projectName": "Credit - Card"
+  },
+  {
+    "id": 17,
+    "projectName": "MiniApp"
+  },
+  {
+    "id": 18,
+    "projectName": "PayAdvance"
+  },
+  {
+    "id": 19,
+    "projectName": "Supply Chain"
+  },
+  {
+    "id": 20,
+    "projectName": "ADBankAdmin"
+  }
+]

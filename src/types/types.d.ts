@@ -1,7 +1,7 @@
 declare global {
   export type Task = {
     id: string;
-    taskName: TaskName;
+    taskName: string;
     subTaskName: SubTaskName;
     status: TaskStatus;
     complexity: TaskComplexity;
@@ -18,16 +18,10 @@ declare global {
     staffId: string;
     staffName: string;
   };
-  export type TaskName =
-    | "Development"
-    | "Meeting"
-    | "Support"
-    | "Deployment"
-    | "Testing"
-    | "Request Form"
-    | "Documentation"
-    | "Bug Fixed"
-    | "Discussion";
+  export type TaskName = {
+    id: number;
+    taskName: string;
+  };
   export type SubTaskName =
     | "API"
     | "New"

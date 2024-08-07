@@ -1,6 +1,9 @@
 import { useForm, zodResolver } from "@mantine/form";
 import { taskSchema } from "@utils/schema";
-import { Box, Button, Group, Stack, TextInput } from "@mantine/core";
+import { Box, Button, Group, Stack } from "@mantine/core";
+import { DatePickerInput } from "@mantine/dates";
+import { TimePickerInput } from "@components/inputs/TimePickerInput";
+import { TaskNameSelect } from "@components/select/TaskNameSelect";
 type FormProps = {
   isLoading?: boolean;
   onSubmit: (values: Partial<Task>) => void;
@@ -17,7 +20,7 @@ export function TaskForm({
   const form = useForm<Task>({
     initialValues: values ?? {
       id: "",
-      taskName: "Meeting",
+      taskName: "",
       subTaskName: "New",
       status: "planned",
       complexity: "Low",
@@ -39,22 +42,30 @@ export function TaskForm({
   return (
     <Box component="form" onSubmit={form.onSubmit(onSubmit)}>
       <Stack>
-        <TextInput
-          label="Vehicle Number"
-          placeholder="Enter Vehicle Number here ..."
-          {...form.getInputProps("vehicleNo")}
+        <DatePickerInput
+          withAsterisk
+          label="Pick date"
+          placeholder="Pick date"
+          {...form.getInputProps("date")}
+          value={new Date(form.values.createdAt)}
         />
-        <TextInput
-          label="Model"
-          placeholder="Enter Vehicle Model here ..."
-          {...form.getInputProps("model")}
+        <TimePickerInput
+          withAsterisk
+          label="Start time"
+          {...form.getInputProps("startTime")}
         />
+        <TimePickerInput
+          withAsterisk
+          label="End time"
+          {...form.getInputProps("endTime")}
+        />
+        <TaskNameSelect {...form.getInputProps("taskName")} />
         <Group style={{ alignSelf: "end" }}>
           <Button onClick={close} variant="outline" size="sm">
             Cancel
           </Button>
           <Button loading={isLoading} type="submit" size="sm">
-            Create Vehicle
+            Create Task
           </Button>
         </Group>
       </Stack>

@@ -62,11 +62,12 @@ export function LoginPage() {
         <Button fullWidth loading={isPending} mt="xl" type="submit">
           Login
         </Button>
+        <Box p="sm">
+          <Text style={{ color: "dimgray", position: "relative", top: 20 }}>
+            Copyright © 2020 KBZ Bank. All rights reserved.
+          </Text>
+        </Box>
       </Paper>
-
-      <Text style={{ position: "absolute", bottom: 20, color: "dimgray" }}>
-        Copyright © 2020 KBZ Bank. All rights reserved.
-      </Text>
 
       <BgBlue />
       <BgRed />

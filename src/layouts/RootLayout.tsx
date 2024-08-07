@@ -1,12 +1,10 @@
-import { useEffect } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { PageLoading } from "@components/loading";
+import { useAppSetup } from "@hooks/useAppSetup";
+import { Outlet } from "react-router-dom";
 
 export function RootLayout() {
-  const navigate = useNavigate();
+  const init = useAppSetup();
 
-  useEffect(() => {
-    navigate("/d");
-  }, [navigate]);
-
+  if (!init) return <PageLoading />;
   return <Outlet />;
 }

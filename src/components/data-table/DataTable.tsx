@@ -54,7 +54,12 @@ export function DataTable<T extends MRT_RowData>({
     enableSorting: false,
     enableStickyHeader: true,
     initialState: { density: "xs" },
-    mantineTableContainerProps: { style: { maxHeight: "calc(100vh - 16rem)" } },
+    mantineTableContainerProps: {
+      style: {
+        maxHeight: "calc(100vh - 18rem)",
+        maxWidth: `calc(100vw - 2rem)`,
+      },
+    },
     mantinePaperProps: { style: { height: "100%" } },
     mantineTableBodyCellProps: { style: { whiteSpace: "nowrap" } },
     // pagination
@@ -67,7 +72,14 @@ export function DataTable<T extends MRT_RowData>({
       withEdges: false,
     },
     // table state
-    state: { pagination, isLoading },
+    state: {
+      pagination,
+      isLoading,
+      columnPinning: {
+        right: ["mrt-row-actions"],
+      },
+    },
+
     // row actions
     positionActionsColumn: "last",
     enableRowActions: !!renderRowActions,
