@@ -5,6 +5,7 @@ import { DashboardLayout } from "../layouts/DashboardLayout";
 import { HomePage } from "../pages/dashboard/Home/HomePage";
 import { HistoryPage } from "../pages/dashboard/History/HistoryPage";
 import { SettingsPage } from "../pages/dashboard/Settings/SettingsPage";
+import { TaskDetailPage } from "@pages/dashboard/Task/TaskDetailPage";
 
 const router = createBrowserRouter([
   {
@@ -21,8 +22,17 @@ const router = createBrowserRouter([
             element: <HomePage />,
           },
           {
-            path: "/d/history",
-            element: <HistoryPage />,
+            path: "history",
+            children: [
+              {
+                index: true,
+                element: <HistoryPage />,
+              },
+              {
+                path: ":id",
+                element: <TaskDetailPage />,
+              },
+            ],
           },
           {
             path: "/d/settings",

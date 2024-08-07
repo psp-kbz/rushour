@@ -1,10 +1,11 @@
-import { Badge, Flex, Group, Stack, Title } from "@mantine/core";
+import { Badge, Button, Flex, Group, Stack, Title } from "@mantine/core";
 import { DataTable } from "../../../components/data-table/DataTable";
 import { MRT_ColumnDef } from "mantine-react-table";
 import { DateCell } from "../../../components/data-table/CustomCell";
 import { useTasks } from "../Task/hooks";
 import { format } from "date-fns";
 import { getStatusColor } from "../../../components/common/StatusSection";
+import { Link } from "react-router-dom";
 
 const columns: MRT_ColumnDef<Task>[] = [
   {
@@ -89,10 +90,17 @@ export function HistoryPage() {
         data={data ?? []}
         total={2}
         renderRowActions={(row) => {
-          if (row.original && row.original.id) {
-            return <Group wrap="nowrap"></Group>;
-          }
-          return null;
+          return (
+            <Button
+              variant="white"
+              size="xs"
+              color="info.5"
+              component={Link}
+              to={`/d/history/${row.original.id}`}
+            >
+              View Detail
+            </Button>
+          );
         }}
       />
     </Stack>
