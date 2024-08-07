@@ -20,30 +20,12 @@ declare global {
   };
   export type TaskName = {
     id: number;
-    taskName: string;
+    name: string;
   };
-  export type SubTaskName =
-    | "API"
-    | "New"
-    | "Production"
-    | "UAT"
-    | "VPN Request"
-    | "AD Request"
-    | "API Documentation"
-    | "Change Request"
-    | "Handover"
-    | "Portal"
-    | "Enhancement"
-    | "Daily Standup Meeting"
-    | "Interview"
-    | "Team Discussion";
-  export type TaskStatus =
-    | "completed"
-    | "in-progress"
-    | "planned"
-    | "pending"
-    | "blocked";
-  export type TaskComplexity = "Low" | "Medium" | "High";
+  export type SelectType = {
+    id: number;
+    name: string;
+  };
 
   //API Response
   export type ApiListResponse<T> = {

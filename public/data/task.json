@@ -1,38 +1,38 @@
 [
   {
     "id": 1,
-    "taskName": "Development"
+    "name": "Development"
   },
   {
     "id": 2,
-    "taskName": "Meeting"
+    "name": "Meeting"
   },
   {
     "id": 3,
-    "taskName": "Support"
+    "name": "Support"
   },
   {
     "id": 4,
-    "taskName": "Deployment"
+    "name": "Deployment"
   },
   {
     "id": 5,
-    "taskName": "Testing"
+    "name": "Testing"
   },
   {
     "id": 6,
-    "taskName": "Request Form"
+    "name": "Request Form"
   },
   {
     "id": 7,
-    "taskName": "Documentation"
+    "name": "Documentation"
   },
   {
     "id": 8,
-    "taskName": "Bug Fixed"
+    "name": "Bug Fixed"
   },
   {
     "id": 9,
-    "taskName": "Discussion"
+    "name": "Discussion"
   }
 ]

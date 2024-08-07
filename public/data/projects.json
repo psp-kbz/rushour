@@ -1,82 +1,82 @@
 [
   {
     "id": 1,
-    "projectName": "API Ring"
+    "name": "API Ring"
   },
   {
     "id": 2,
-    "projectName": "SSBP"
+    "name": "SSBP"
   },
   {
     "id": 3,
-    "projectName": "Digital Onbo"
+    "name": "Digital Onbo"
   },
   {
     "id": 4,
-    "projectName": "CMS / TMS"
+    "name": "CMS / TMS"
   },
   {
     "id": 5,
-    "projectName": "Documentation"
+    "name": "Documentation"
   },
   {
     "id": 6,
-    "projectName": "BA"
+    "name": "BA"
   },
   {
     "id": 7,
-    "projectName": "QMS"
+    "name": "QMS"
   },
   {
     "id": 8,
-    "projectName": "CDMS"
+    "name": "CDMS"
   },
   {
     "id": 9,
-    "projectName": "SmartPay"
+    "name": "SmartPay"
   },
   {
     "id": 10,
-    "projectName": "H2H"
+    "name": "H2H"
   },
   {
     "id": 11,
-    "projectName": "SMS"
+    "name": "SMS"
   },
   {
     "id": 12,
-    "projectName": "DocumentAI"
+    "name": "DocumentAI"
   },
   {
     "id": 13,
-    "projectName": "KBZPay"
+    "name": "KBZPay"
   },
   {
     "id": 14,
-    "projectName": "Inbound Remittance"
+    "name": "Inbound Remittance"
   },
   {
     "id": 15,
-    "projectName": "N / A"
+    "name": "N / A"
   },
   {
     "id": 16,
-    "projectName": "Credit - Card"
+    "name": "Credit - Card"
   },
   {
     "id": 17,
-    "projectName": "MiniApp"
+    "name": "MiniApp"
   },
   {
     "id": 18,
-    "projectName": "PayAdvance"
+    "name": "PayAdvance"
   },
   {
     "id": 19,
-    "projectName": "Supply Chain"
+    "name": "Supply Chain"
   },
   {
     "id": 20,
-    "projectName": "ADBankAdmin"
+    "name": "ADBankAdmin"
   }
 ]

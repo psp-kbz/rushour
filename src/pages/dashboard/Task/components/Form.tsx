@@ -1,9 +1,13 @@
 import { useForm, zodResolver } from "@mantine/form";
 import { taskSchema } from "@utils/schema";
-import { Box, Button, Group, Stack } from "@mantine/core";
+import { Box, Button, Grid, GridCol, Group, Stack } from "@mantine/core";
 import { DatePickerInput } from "@mantine/dates";
 import { TimePickerInput } from "@components/inputs/TimePickerInput";
 import { TaskNameSelect } from "@components/select/TaskNameSelect";
+import { SubTaskNameSelect } from "@components/select/SubTaskNameSelect";
+import { ProjectSelect } from "@components/select/ProjectSelect";
+import { ComplexitySelect } from "@components/select/ComplexitySelect";
+import { DepartmentSelect } from "@components/select/DepartmentSelect";
 type FormProps = {
   isLoading?: boolean;
   onSubmit: (values: Partial<Task>) => void;
@@ -40,7 +44,7 @@ export function TaskForm({
     validate: zodResolver(taskSchema),
   });
   return (
-    <Box component="form" onSubmit={form.onSubmit(onSubmit)}>
+    <Box component="form" onSubmit={form.onSubmit(onSubmit)} mb="lg">
       <Stack>
         <DatePickerInput
           withAsterisk
@@ -49,17 +53,49 @@ export function TaskForm({
           {...form.getInputProps("date")}
           value={new Date(form.values.createdAt)}
         />
-        <TimePickerInput
-          withAsterisk
-          label="Start time"
-          {...form.getInputProps("startTime")}
-        />
-        <TimePickerInput
-          withAsterisk
-          label="End time"
-          {...form.getInputProps("endTime")}
-        />
-        <TaskNameSelect {...form.getInputProps("taskName")} />
+        <Grid>
+          <Grid.Col span={6}>
+            <TimePickerInput
+              withAsterisk
+              label="Start time"
+              {...form.getInputProps("startTime")}
+            />
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <TimePickerInput
+              withAsterisk
+              label="End time"
+              {...form.getInputProps("endTime")}
+            />
+          </Grid.Col>
+        </Grid>
+        <Grid>
+          <Grid.Col span={6}>
+            <TaskNameSelect withAsterisk {...form.getInputProps("taskName")} />
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <SubTaskNameSelect
+              withAsterisk
+              {...form.getInputProps("subTaskName")}
+            />
+          </Grid.Col>
+        </Grid>
+        <Grid>
+          <Grid.Col span={6}>
+            <ProjectSelect
+              withAsterisk
+              {...form.getInputProps("projectName")}
+            />
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <ComplexitySelect
+              withAsterisk
+              {...form.getInputProps("complexity")}
+            />
+          </Grid.Col>
+        </Grid>
+
+        <DepartmentSelect {...form.getInputProps("departmentName")} />
         <Group style={{ alignSelf: "end" }}>
           <Button onClick={close} variant="outline" size="sm">
             Cancel

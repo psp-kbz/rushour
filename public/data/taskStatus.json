@@ -1,22 +1,22 @@
 [
   {
     "id": 1,
-    "status": "completed"
+    "name": "completed"
   },
   {
     "id": 2,
-    "status": "in-progress"
+    "name": "in-progress"
   },
   {
     "id": 3,
-    "status": "planned"
+    "name": "planned"
   },
   {
     "id": 4,
-    "status": "pending"
+    "name": "pending"
   },
   {
     "id": 5,
-    "status": "blocked"
+    "name": "blocked"
   }
 ]

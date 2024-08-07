@@ -11,4 +11,5 @@ export const theme: MantineThemeOverride = {
     fontFamily: "Poppins, sans-serif",
   },
   fontFamily: "Poppins, sans-serif",
+  fontFamilyMonospace: "Poppins, sans-serif",
 };

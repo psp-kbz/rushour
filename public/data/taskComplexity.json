@@ -1,14 +1,14 @@
 [
   {
     "id": 1,
-    "complexity": "Low"
+    "name": "Low"
   },
   {
     "id": 2,
-    "complexity": "Medium"
+    "name": "Medium"
   },
   {
     "id": 3,
-    "complexity": "High"
+    "name": "High"
   }
 ]
