@@ -8,6 +8,7 @@ import { SubTaskNameSelect } from "@components/select/SubTaskNameSelect";
 import { ProjectSelect } from "@components/select/ProjectSelect";
 import { ComplexitySelect } from "@components/select/ComplexitySelect";
 import { DepartmentSelect } from "@components/select/DepartmentSelect";
+import { StatusSelect } from "@components/select/StatusSelect";
 type FormProps = {
   isLoading?: boolean;
   onSubmit: (values: Partial<Task>) => void;
@@ -30,8 +31,8 @@ export function TaskForm({
       complexity: "",
       createdAt: new Date(),
       updatedAt: new Date(),
-      fromTime: new Date(),
-      toTime: new Date(),
+      fromTime: "9:00AM",
+      toTime: "10:00AM",
       projectName: "",
       remark: "",
       projectManagerName: "",
@@ -88,6 +89,11 @@ export function TaskForm({
             <ComplexitySelect {...form.getInputProps("complexity")} />
           </Grid.Col>
         </Grid>
+        <Grid>
+          <Grid.Col span={6}>
+            <StatusSelect {...form.getInputProps("status")} />
+          </Grid.Col>
+        </Grid>
 
         <DepartmentSelect {...form.getInputProps("departmentName")} />
         <Textarea
@@ -124,8 +130,8 @@ export function EditTaskForm({
       complexity: "",
       createdAt: new Date(),
       updatedAt: new Date(),
-      fromTime: new Date(),
-      toTime: new Date(),
+      fromTime: "9:00AM",
+      toTime: "10:00AM",
       projectName: "",
       remark: "",
       projectManagerName: "",
@@ -153,6 +159,7 @@ export function EditTaskForm({
               withAsterisk
               label="Start time"
               {...form.getInputProps("startTime")}
+              defaultValue={form.values.fromTime}
             />
           </Grid.Col>
           <Grid.Col span={6}>

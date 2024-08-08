@@ -6,5 +6,5 @@ export const loginSchema = z.object({
 });
 
 export const taskSchema = z.object({
-  taskSchema: z.string().min(1, { message: "Please Select Task" }),
+  taskName: z.string().min(1, { message: "Please Select Task" }),
 });

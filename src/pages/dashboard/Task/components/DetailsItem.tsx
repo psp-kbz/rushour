@@ -20,8 +20,12 @@ type DetailsItemProps = {
 export function DetailsItem({ label, value }: DetailsItemProps) {
   return (
     <tr style={{ color: "#4E4B66" }}>
-      <td style={{ padding: "10px", width: "300px" }}>{label}</td>
-      <td style={{ padding: "10px", width: "auto" }}>{value}</td>
+      <td style={{ padding: "10px", width: "300px", color: "grey" }}>
+        {label}
+      </td>
+      <td style={{ padding: "10px", width: "auto", color: "black" }}>
+        {value}
+      </td>
     </tr>
   );
 }

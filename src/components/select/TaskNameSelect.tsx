@@ -1,4 +1,3 @@
-import { task } from "@config/query-keys";
 import { Loader, Select, SelectProps } from "@mantine/core";
 import { getTaskSelect } from "@services/select.service";
 
@@ -6,14 +5,14 @@ import { useQuery } from "@tanstack/react-query";
 
 const useTaskNameSelectQuery = () =>
   useQuery({
-    queryKey: task.all,
+    queryKey: ["task"],
     queryFn: () => getTaskSelect(),
   });
 
 export function TaskNameSelect({ ...props }: SelectProps) {
   const { data, isPending } = useTaskNameSelectQuery();
   const options = data?.map((task: TaskName) => ({
-    value: task.id.toString() ?? "",
+    value: task.name ?? "",
     label: task.name,
   }));
   return (

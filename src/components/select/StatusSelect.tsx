@@ -1,15 +1,15 @@
 import { Loader, Select, SelectProps } from "@mantine/core";
-import { getComplexitySelect } from "@services/select.service";
+import { getStatusSelect } from "@services/select.service";
 
 import { useQuery } from "@tanstack/react-query";
 
 const useSelectQuery = () =>
   useQuery({
-    queryKey: ["taskComplexity"],
-    queryFn: () => getComplexitySelect(),
+    queryKey: ["taskStatus"],
+    queryFn: () => getStatusSelect(),
   });
 
-export function ComplexitySelect({ ...props }: SelectProps) {
+export function StatusSelect({ ...props }: SelectProps) {
   const { data, isPending } = useSelectQuery();
   const options = data?.map((value: SelectType) => ({
     value: value.name.toString() ?? "",

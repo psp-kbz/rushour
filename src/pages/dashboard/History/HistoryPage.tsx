@@ -7,6 +7,7 @@ import { format } from "date-fns";
 import { getStatusColor } from "../../../components/common/StatusSection";
 import { Link } from "react-router-dom";
 import { DateRangeFilter } from "@components/inputs/DateRangeFilter";
+import { CreateTaskModal } from "../Task/components/FormModal";
 
 const columns: MRT_ColumnDef<Task>[] = [
   {
@@ -76,6 +77,7 @@ const columns: MRT_ColumnDef<Task>[] = [
 
 export function HistoryPage() {
   const { data, isLoading } = useTasks();
+  console.log("rendered");
   return (
     <Stack p="md">
       <Flex
@@ -87,12 +89,13 @@ export function HistoryPage() {
         <Title order={2}>Task List</Title>
         <Group>
           <DateRangeFilter />
+          <CreateTaskModal />
         </Group>
       </Flex>
       <DataTable
         columns={columns}
         isLoading={isLoading}
-        data={data ?? []}
+        data={data?.data.data ?? []}
         total={1}
         renderRowActions={(row) => {
           return (

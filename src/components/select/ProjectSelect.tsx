@@ -1,4 +1,3 @@
-import { project } from "@config/query-keys";
 import { Loader, Select, SelectProps } from "@mantine/core";
 import { getProjectSelect } from "@services/select.service";
 
@@ -6,14 +5,14 @@ import { useQuery } from "@tanstack/react-query";
 
 const useSelectQuery = () =>
   useQuery({
-    queryKey: project.all,
+    queryKey: ["project"],
     queryFn: () => getProjectSelect(),
   });
 
 export function ProjectSelect({ ...props }: SelectProps) {
   const { data, isPending } = useSelectQuery();
   const options = data?.map((value: SelectType) => ({
-    value: value.id.toString() ?? "",
+    value: value.name.toString() ?? "",
     label: value.name,
   }));
   return (

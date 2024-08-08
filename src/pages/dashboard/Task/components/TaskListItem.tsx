@@ -40,14 +40,13 @@ export function TaskListItem({ task }: ListItemProps) {
 
         <Box mb="sm">
           <Text size="sm" style={{ color: "dimgray" }}>
-            {task?.createdAt.toDateString()}
+            {task?.createdAt.toString()}
           </Text>
         </Box>
         <Box mb="sm">
           <Group justify="space-between">
             <Text size="sm" style={{ color: "black" }}>
-              {task?.fromTime?.toLocaleTimeString()} -{" "}
-              {task?.toTime?.toLocaleTimeString()}
+              {task?.fromTime?.toString()} - {task?.toTime?.toString()}
             </Text>
             <Badge color={getStatusColor(task?.status || "")}>
               {task?.status}

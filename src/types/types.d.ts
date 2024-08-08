@@ -2,13 +2,13 @@ declare global {
   export type Task = {
     id: string;
     taskName: string;
-    subTaskName: SubTaskName;
-    status: TaskStatus;
-    complexity: TaskComplexity;
+    subTaskName: string;
+    status: string;
+    complexity: string;
     createdAt: Date;
     updatedAt?: Date;
-    fromTime?: Date;
-    toTime?: Date;
+    fromTime?: string;
+    toTime?: string;
     projectName?: string;
     remark: string;
     projectManagerName?: string;

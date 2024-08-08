@@ -17,9 +17,9 @@ export function TaskList() {
           <CreateTaskModal />
         </Box>
       </Group>
-      {data?.length === 0 && <p> Empty Tasks</p>}
+      {data?.data.data.length === 0 && <p> Empty Tasks</p>}
       <Grid>
-        {data?.map((task) => (
+        {data?.data.data.map((task) => (
           <TaskListItem key={task.id} task={task} />
         ))}
       </Grid>

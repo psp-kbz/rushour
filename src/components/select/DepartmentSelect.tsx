@@ -1,4 +1,3 @@
-import { department } from "@config/query-keys";
 import { Loader, Select, SelectProps } from "@mantine/core";
 import { getDepartmentSelect } from "@services/select.service";
 
@@ -6,14 +5,14 @@ import { useQuery } from "@tanstack/react-query";
 
 const useSelectQuery = () =>
   useQuery({
-    queryKey: department.all,
+    queryKey: ["department"],
     queryFn: () => getDepartmentSelect(),
   });
 
 export function DepartmentSelect({ ...props }: SelectProps) {
   const { data, isPending } = useSelectQuery();
   const options = data?.map((value: SelectType) => ({
-    value: value.id.toString() ?? "",
+    value: value.name.toString() ?? "",
     label: value.name,
   }));
   return (

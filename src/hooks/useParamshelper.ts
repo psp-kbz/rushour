@@ -1,9 +1,11 @@
 import { useShallowEffect } from "@mantine/hooks";
+import { useCallback } from "react";
 import { useSearchParams } from "react-router-dom";
 
 type VALUE = string | null | number | undefined;
 
 function removeNil(obj: Record<string, VALUE>) {
+  if (!obj) return {};
   return Object.fromEntries(
     Object.entries(obj).filter(([, v]) => Boolean(v))
   ) as Record<string, string>;
@@ -24,15 +26,21 @@ export function useParamsHelper(defaultParams?: Record<string, string>) {
     setSearchParams(removeNil(newParams));
   };
 
-  const setParam = (key: string, value?: VALUE) => {
-    const params = Object.fromEntries([...searchParams]);
-    setSearchParams(removeNil({ ...params, [key]: value }));
-  };
+  const setParam = useCallback(
+    (key: string, value?: VALUE) => {
+      const params = Object.fromEntries([...searchParams]);
+      setSearchParams(removeNil({ ...params, [key]: value }));
+    },
+    [searchParams, setSearchParams]
+  );
 
-  const setParams = (newParams: Record<string, VALUE>) => {
-    const params = Object.fromEntries([...searchParams]);
-    setSearchParams(removeNil({ ...params, ...newParams }));
-  };
+  const setParams = useCallback(
+    (newParams: Record<string, VALUE>) => {
+      const params = Object.fromEntries([...searchParams]);
+      setSearchParams(removeNil({ ...params, ...newParams }));
+    },
+    [searchParams, setSearchParams]
+  );
 
   return {
     getParam,
