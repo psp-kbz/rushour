@@ -1,7 +1,10 @@
 import { Flex, Paper, Box, Button, Text, Container } from "@mantine/core";
 import { Details, DetailsItem } from "./components/DetailsItem";
+import { useParams } from "react-router-dom";
+import { EditTaskModal } from "./components/FormModal";
 
 export function TaskDetailPage() {
+  const { id } = useParams();
   return (
     <Container style={{ marginTop: 20 }}>
       <Flex direction="column" gap="md">
@@ -17,9 +20,9 @@ export function TaskDetailPage() {
             </Text>
           </Flex>
           <Details>
-            <DetailsItem label="Task" value="" />
-            <DetailsItem label="Model" value="" />
-            <DetailsItem label="Territory" value="" />
+            <DetailsItem label="Task" value={id?.toString()} />
+            <DetailsItem label="SubTask" value="" />
+            <DetailsItem label="Project" value="" />
           </Details>
         </Paper>
         <Paper bg="white" shadow="xs">
@@ -32,17 +35,18 @@ export function TaskDetailPage() {
             <Text fw={600} fz={18}>
               Additional Information
             </Text>
+            <EditTaskModal />
             {/* <EditVehicleModal initialValues={vehicle?.data} /> */}
           </Flex>
           <Details>
-            <DetailsItem label="Status" value="Available" />
-            <DetailsItem label="Currency Center or Hub" value="" />
+            <DetailsItem label="Status" value="Completed" />
+            <DetailsItem label="Complexity" value="" />
           </Details>
         </Paper>
         <Paper bg="white" shadow="xs">
           <Box p="md" style={{ borderBottom: "1px solid #D9DBE9" }}>
             <Text fw={600} fz={18}>
-              Delete Vehicle
+              Delete Task
             </Text>
           </Box>
           <Details>
@@ -50,7 +54,7 @@ export function TaskDetailPage() {
               label="Delete Permanently?"
               value={
                 <Button color="red.5" variant="subtle" onClick={() => null}>
-                  Delete this Vehicle
+                  Delete this Task
                 </Button>
               }
             />

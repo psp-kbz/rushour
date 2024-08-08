@@ -5,7 +5,7 @@ import { Header } from "../components/common/header/Header";
 import { useAuthedRoute } from "@hooks/useAuth";
 
 export function DashboardLayout() {
-  //useAuthedRoute();
+  useAuthedRoute();
   return (
     <AppShell header={{ height: 60 }} navbar={{ width: 250, breakpoint: "sm" }}>
       <Header />

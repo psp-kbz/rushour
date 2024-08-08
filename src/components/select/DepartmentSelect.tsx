@@ -1,15 +1,12 @@
-import { department, taskComplexity } from "@config/query-keys";
+import { department } from "@config/query-keys";
 import { Loader, Select, SelectProps } from "@mantine/core";
-import {
-  getComplexitySelect,
-  getDepartmentSelect,
-} from "@services/select.service";
+import { getDepartmentSelect } from "@services/select.service";
 
 import { useQuery } from "@tanstack/react-query";
 
 const useSelectQuery = () =>
   useQuery({
-    queryKey: department.lists(),
+    queryKey: department.all,
     queryFn: () => getDepartmentSelect(),
   });
 

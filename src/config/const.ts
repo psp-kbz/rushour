@@ -4,7 +4,7 @@ export const HEADER_HEIGHT = 80;
 
 export const ENCRYPT_KEY = "encrypt-key";
 
-export const SERVICE_ID = "DTT";
+export const SERVICE_ID = import.meta.env.VITE_SERVICE_ID ?? "";
 
 export const TRANSFER_TYPES = {
   ANY: "ANY",

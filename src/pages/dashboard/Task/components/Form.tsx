@@ -1,6 +1,6 @@
 import { useForm, zodResolver } from "@mantine/form";
 import { taskSchema } from "@utils/schema";
-import { Box, Button, Grid, GridCol, Group, Stack } from "@mantine/core";
+import { Box, Button, Grid, Group, Stack, Textarea } from "@mantine/core";
 import { DatePickerInput } from "@mantine/dates";
 import { TimePickerInput } from "@components/inputs/TimePickerInput";
 import { TaskNameSelect } from "@components/select/TaskNameSelect";
@@ -25,9 +25,9 @@ export function TaskForm({
     initialValues: values ?? {
       id: "",
       taskName: "",
-      subTaskName: "New",
-      status: "planned",
-      complexity: "Low",
+      subTaskName: "",
+      status: "",
+      complexity: "",
       createdAt: new Date(),
       updatedAt: new Date(),
       fromTime: new Date(),
@@ -82,26 +82,120 @@ export function TaskForm({
         </Grid>
         <Grid>
           <Grid.Col span={6}>
-            <ProjectSelect
-              withAsterisk
-              {...form.getInputProps("projectName")}
-            />
+            <ProjectSelect {...form.getInputProps("projectName")} />
           </Grid.Col>
           <Grid.Col span={6}>
-            <ComplexitySelect
-              withAsterisk
-              {...form.getInputProps("complexity")}
-            />
+            <ComplexitySelect {...form.getInputProps("complexity")} />
           </Grid.Col>
         </Grid>
 
         <DepartmentSelect {...form.getInputProps("departmentName")} />
+        <Textarea
+          placeholder="Enter Remark"
+          {...form.getInputProps("remark")}
+          label="Remark"
+          name="Remark"
+        />
         <Group style={{ alignSelf: "end" }}>
           <Button onClick={close} variant="outline" size="sm">
             Cancel
           </Button>
           <Button loading={isLoading} type="submit" size="sm">
             Create Task
+          </Button>
+        </Group>
+      </Stack>
+    </Box>
+  );
+}
+
+export function EditTaskForm({
+  isLoading = false,
+  onSubmit,
+  close,
+  values,
+}: FormProps) {
+  const form = useForm<Task>({
+    initialValues: values ?? {
+      id: "",
+      taskName: "",
+      subTaskName: "",
+      status: "",
+      complexity: "",
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      fromTime: new Date(),
+      toTime: new Date(),
+      projectName: "",
+      remark: "",
+      projectManagerName: "",
+      businessAnalystName: "",
+      departmentName: "",
+      category: "",
+      staffId: "",
+      staffName: "",
+    },
+    validate: zodResolver(taskSchema),
+  });
+  return (
+    <Box component="form" onSubmit={form.onSubmit(onSubmit)} mb="lg">
+      <Stack>
+        <DatePickerInput
+          withAsterisk
+          label="Pick date"
+          placeholder="Pick date"
+          {...form.getInputProps("date")}
+          value={new Date(form.values.createdAt)}
+        />
+        <Grid>
+          <Grid.Col span={6}>
+            <TimePickerInput
+              withAsterisk
+              label="Start time"
+              {...form.getInputProps("startTime")}
+            />
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <TimePickerInput
+              withAsterisk
+              label="End time"
+              {...form.getInputProps("endTime")}
+            />
+          </Grid.Col>
+        </Grid>
+        <Grid>
+          <Grid.Col span={6}>
+            <TaskNameSelect withAsterisk {...form.getInputProps("taskName")} />
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <SubTaskNameSelect
+              withAsterisk
+              {...form.getInputProps("subTaskName")}
+            />
+          </Grid.Col>
+        </Grid>
+        <Grid>
+          <Grid.Col span={6}>
+            <ProjectSelect {...form.getInputProps("projectName")} />
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <ComplexitySelect {...form.getInputProps("complexity")} />
+          </Grid.Col>
+        </Grid>
+
+        <DepartmentSelect {...form.getInputProps("departmentName")} />
+        <Textarea
+          placeholder="Enter Remark"
+          {...form.getInputProps("remark")}
+          label="Remark"
+          name="Remark"
+        />
+        <Group style={{ alignSelf: "end" }}>
+          <Button onClick={close} variant="outline" size="sm">
+            Cancel
+          </Button>
+          <Button loading={isLoading} type="submit" size="sm">
+            Save Changes
           </Button>
         </Group>
       </Stack>

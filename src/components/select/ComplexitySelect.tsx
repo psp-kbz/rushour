@@ -6,7 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 
 const useSelectQuery = () =>
   useQuery({
-    queryKey: taskComplexity.lists(),
+    queryKey: taskComplexity.all,
     queryFn: () => getComplexitySelect(),
   });
 

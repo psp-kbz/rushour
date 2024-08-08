@@ -6,7 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 
 const useSelectQuery = () =>
   useQuery({
-    queryKey: project.lists(),
+    queryKey: project.all,
     queryFn: () => getProjectSelect(),
   });
 

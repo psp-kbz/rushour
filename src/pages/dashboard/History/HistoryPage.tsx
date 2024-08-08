@@ -6,8 +6,21 @@ import { useTasks } from "../Task/hooks";
 import { format } from "date-fns";
 import { getStatusColor } from "../../../components/common/StatusSection";
 import { Link } from "react-router-dom";
+import { DateRangeFilter } from "@components/inputs/DateRangeFilter";
 
 const columns: MRT_ColumnDef<Task>[] = [
+  {
+    accessorKey: "status",
+    header: "Status",
+    id: "status",
+    Cell: ({ row }) => {
+      return (
+        <Badge color={getStatusColor(row.original.status)}>
+          {row.original.status}
+        </Badge>
+      );
+    },
+  },
   {
     accessorKey: "createdAt",
     header: "Date",
@@ -53,18 +66,7 @@ const columns: MRT_ColumnDef<Task>[] = [
     header: "SubTask",
     id: "subTaskName",
   },
-  {
-    accessorKey: "status",
-    header: "Status",
-    id: "status",
-    Cell: ({ row }) => {
-      return (
-        <Badge color={getStatusColor(row.original.status)}>
-          {row.original.status}
-        </Badge>
-      );
-    },
-  },
+
   {
     accessorKey: "complexity",
     header: "Complexity",
@@ -83,16 +85,19 @@ export function HistoryPage() {
         gap="md"
       >
         <Title order={2}>Task List</Title>
+        <Group>
+          <DateRangeFilter />
+        </Group>
       </Flex>
       <DataTable
         columns={columns}
         isLoading={isLoading}
         data={data ?? []}
-        total={2}
+        total={1}
         renderRowActions={(row) => {
           return (
             <Button
-              variant="white"
+              variant="blue"
               size="xs"
               color="info.5"
               component={Link}

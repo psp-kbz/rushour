@@ -6,7 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 
 const useSelectQuery = () =>
   useQuery({
-    queryKey: subTask.lists(),
+    queryKey: subTask.all,
     queryFn: () => getSubTaskSelect(),
   });
 

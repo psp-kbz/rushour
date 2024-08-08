@@ -1,6 +1,5 @@
 import {
   // MRT_GlobalFilterTextInput,
-  // MRT_TablePagination,
   // MRT_ToolbarAlertBanner,
   // MRT_TableBodyCellValue,
   type MRT_ColumnDef,
@@ -13,8 +12,9 @@ import {
 } from "mantine-react-table";
 // import { Table, TableScrollContainer } from '@mantine/core';
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useParamsHelper } from "../../hooks/useParamshelper";
+import { useEffect, useState } from "react";
 
 export function DataTable<T extends MRT_RowData>({
   columns,
@@ -48,7 +48,7 @@ export function DataTable<T extends MRT_RowData>({
     // ui
     enableTopToolbar: false,
     enableBottomToolbar: false,
-    enableColumnActions: false,
+    enableColumnActions: true,
     enableColumnFilters: false,
     enablePagination: false,
     enableSorting: false,
@@ -56,7 +56,7 @@ export function DataTable<T extends MRT_RowData>({
     initialState: { density: "xs" },
     mantineTableContainerProps: {
       style: {
-        maxHeight: "calc(100vh - 18rem)",
+        maxHeight: "calc(115vh - 18rem)",
         maxWidth: `calc(100vw - 2rem)`,
       },
     },

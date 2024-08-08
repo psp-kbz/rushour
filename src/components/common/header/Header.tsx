@@ -68,7 +68,6 @@ export function Header() {
           <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
           <Logo height={35} />
         </Group>
-        <RightSection />
       </Group>
     </AppShellHeader>
   );

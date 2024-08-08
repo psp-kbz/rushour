@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-import { useParamsHelper } from "../../../hooks/useParamshelper";
 import { getTasks } from "../../../services/task";
 import { task } from "../../../config/query-keys";
+import { useParamsHelper } from "@hooks/useParamshelper";
 
 export function useTasks() {
   const { getParams } = useParamsHelper();
